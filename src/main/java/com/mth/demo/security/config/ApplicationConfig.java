@@ -48,23 +48,6 @@ public class ApplicationConfig {
   }
 
   @Bean
-  public CsvHandler csvHandler() {
-    return new CsvHandler(financeRepository);
-  }
-
-  @Bean
-  public JsonHandler jsonHandler() {
-    return new JsonHandler(financeRepository);
-  }
-
-  @Bean
-  public LimitHandler limitHandler(LimitRepository limitRepository,
-                                   FinanceRepository financeRepository,
-                                   CategoryRepository categoryRepository) {
-    return new LimitHandler(limitRepository, financeRepository, categoryRepository);
-  }
-
-  @Bean
   public MultipartResolver multipartResolver() {
     return new StandardServletMultipartResolver();
   }
