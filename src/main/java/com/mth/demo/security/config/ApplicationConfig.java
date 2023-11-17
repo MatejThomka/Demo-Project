@@ -1,11 +1,5 @@
 package com.mth.demo.security.config;
 
-import com.mth.demo.handler.export.CsvHandler;
-import com.mth.demo.handler.export.JsonHandler;
-import com.mth.demo.repositories.FinanceRepository;
-import com.mth.demo.handler.limit.LimitHandler;
-import com.mth.demo.repositories.CategoryRepository;
-import com.mth.demo.repositories.LimitRepository;
 import com.mth.demo.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -26,7 +20,7 @@ import org.springframework.web.multipart.support.StandardServletMultipartResolve
 public class ApplicationConfig {
 
   private final UserRepository userRepository;
-  private final FinanceRepository financeRepository;
+
 
   @Bean
   public UserDetailsService userDetailsService() {

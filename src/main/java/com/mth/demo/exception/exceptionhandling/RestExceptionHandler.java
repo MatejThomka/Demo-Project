@@ -1,6 +1,24 @@
 package com.mth.demo.exception.exceptionhandling;
 
-import com.mth.demo.exception.*;
+import com.mth.demo.exception.EmailIsMissingException;
+import com.mth.demo.exception.MissingNameException;
+import com.mth.demo.exception.NothingInsideException;
+import com.mth.demo.exception.PasswordIsMissingException;
+import com.mth.demo.exception.UnauthorizedException;
+import com.mth.demo.exception.UserAlreadyExistsException;
+import com.mth.demo.exception.UserNotFoundException;
+import com.mth.demo.exception.dataexportexceptions.DateRangeMissingException;
+import com.mth.demo.exception.dataexportexceptions.DateRangeTooBigException;
+import com.mth.demo.exception.dataexportexceptions.IOException;
+import com.mth.demo.exception.financeexceptions.FinanceErrorException;
+import com.mth.demo.exception.financeexceptions.FinanceNotFoundException;
+import com.mth.demo.exception.goalexceptions.BalanceLowException;
+import com.mth.demo.exception.goalexceptions.DepositMissingException;
+import com.mth.demo.exception.goalexceptions.GoalAlreadyExistException;
+import com.mth.demo.exception.goalexceptions.GoalNotExistException;
+import com.mth.demo.exception.goalexceptions.NothingToChangeException;
+import com.mth.demo.exception.goalexceptions.TargetMissingException;
+import com.mth.demo.exception.goalexceptions.WithdrawalMissingException;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
@@ -8,7 +26,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 @Order(Ordered.HIGHEST_PRECEDENCE)
